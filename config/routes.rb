@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   # STEP 1: A ROUTE triggers a controller action
   # verb "/urls" => "namespace/controllers#action"
   namespace :api do
-    post "/messages" => "messages#create"
+    get '/messages' => 'messages#index'
+    # post "/messages" => "messages#create"
+    post '/messages/:text' => 'messages#create'
   end
 end
