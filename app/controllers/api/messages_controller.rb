@@ -5,6 +5,14 @@ class Api::MessagesController < ApplicationController
     render 'index.json.jbuilder'
   end
 
+  # def show
+  #   input_message = params[:text].upcase
+  #   @message = Message.new(text: input_message)
+  #   @message.save
+    
+  # end
+
+
   def create
     input_message = params[:text].upcase
     @message = Message.new(text: input_message)
